@@ -27,15 +27,15 @@ const App = () => {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         {userName ? (
-          <Switch>
-            <Route path="/" component={HomePageLazy} />
-          </Switch>
-        ) : (
           <DefaultLayout>
             <Switch>
-              <Route path="/" component={IdentificationPageLazy} />
+              <Route path="/" component={HomePageLazy} />
             </Switch>
           </DefaultLayout>
+        ) : (
+          <Switch>
+            <Route path="/" component={IdentificationPageLazy} />
+          </Switch>
         )}
       </Suspense>
     </BrowserRouter>

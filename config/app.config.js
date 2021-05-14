@@ -7,7 +7,7 @@ module.exports = {
     url: 'http://localhost',
     remotes: {
       'remote/identification': 'identification@http://localhost:8081/remoteEntry.js',
-      'remote/header': 'header@http://localhost:8081/remoteEntry.js',
+      'remote/header': 'header@http://localhost:8082/remoteEntry.js',
     },
   },
   production: {
