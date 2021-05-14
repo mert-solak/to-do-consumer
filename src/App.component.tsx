@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { Loading } from './components';
 
-// const AuthLazy = lazy(() => import('./pages/Auth/Auth'));
+const IdentificationPageLazy = lazy(() => import('./pages/identification/Identification.page'));
 
 const App = () => (
   <BrowserRouter>
     <Suspense fallback={<Loading />}>
-      <Switch>{/* <Route path="/" component={AuthLazy} /> */}</Switch>
+      <Switch>
+        <Route path="/" component={IdentificationPageLazy} />
+      </Switch>
     </Suspense>
   </BrowserRouter>
 );
