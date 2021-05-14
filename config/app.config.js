@@ -6,7 +6,7 @@ module.exports = {
     port: 8080,
     url: 'http://localhost',
     remotes: {
-      // 'remote/auth': 'auth@http://localhost:8081/remoteEntry.js',
+      'remote/identification': 'identification@http://localhost:8081/remoteEntry.js',
     },
   },
   production: {

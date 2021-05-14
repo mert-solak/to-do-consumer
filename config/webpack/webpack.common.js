@@ -20,7 +20,12 @@ module.exports = {
               modules: true,
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: '@import "./src/index.scss";',
+            },
+          },
         ],
       },
     ],
