@@ -1,3 +1,4 @@
 export type UserName = string;
 
-export type SetUserNameOnRequest = (userName: UserName) => void;
+export type SendUserNameOnRequest = (userName: UserName) => () => void;
+export type SetUserName = (listener: (username: UserName) => void) => void;
