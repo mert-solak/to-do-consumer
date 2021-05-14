@@ -6,11 +6,10 @@ import { userDefinitions } from './definitions';
 import { userEvents } from './events';
 
 const IdentificationPageLazy = lazy(() => import('./pages/identification/Identification.page'));
-
-const Test = () => <p>test</p>;
+const HomePageLazy = lazy(() => import('./pages/home/Home.page'));
 
 const App = () => {
-  const [userName, setUserName] = useState<userDefinitions.UserName>();
+  const [userName, setUserName] = useState<userDefinitions.UserName>('username'); // TODO:Mert remove
 
   useEffect(() => {
     userEvents.setUserName(setUserName);
@@ -27,7 +26,7 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         {userName ? (
           <Switch>
-            <Route path="/" component={Test} />
+            <Route path="/" component={HomePageLazy} />
           </Switch>
         ) : (
           <Switch>
