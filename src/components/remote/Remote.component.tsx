@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Props } from './Remote.config';
 
-export const Remote: React.FC<Props> = ({ mount, withDefaultHistory = false }) => {
+export const Remote: React.FC<Props> = ({ mount, withDefaultHistory }) => {
   const mountElementRef = useRef(null);
 
   const history = useHistory();
@@ -21,12 +21,8 @@ export const Remote: React.FC<Props> = ({ mount, withDefaultHistory = false }) =
       defaultHistory: withDefaultHistory ? history : undefined,
     });
 
-    if (onHostNavigate) {
-      history.listen(onHostNavigate);
-    }
+    history.listen(onHostNavigate);
   }, []);
 
   return <div ref={mountElementRef} />;
 };
-
-export default Remote;

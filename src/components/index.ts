@@ -1,1 +1,2 @@
-export { Loading } from './Loading/Loading';
+export { Loading } from './loading/Loading';
+export { Remote } from './remote/Remote.component';

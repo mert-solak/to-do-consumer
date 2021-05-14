@@ -1,7 +1,7 @@
 import { History } from 'history';
 
 interface MountReturn {
-  onHostNavigate?: (params: { pathname: string }) => void;
+  onHostNavigate: (params: { pathname: string }) => void;
 }
 
 interface MountParameters {
@@ -12,5 +12,5 @@ interface MountParameters {
 
 export interface Props {
   mount: (element: Element | null, params: MountParameters) => MountReturn;
-  withDefaultHistory: boolean;
+  withDefaultHistory?: boolean;
 }
