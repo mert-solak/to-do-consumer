@@ -5,6 +5,8 @@ import { Loading } from './components';
 import { userDefinitions } from './definitions';
 import { userEvents } from './events';
 
+import DefaultLayout from './layouts/default/Default.layout';
+
 const IdentificationPageLazy = lazy(() => import('./pages/identification/Identification.page'));
 const HomePageLazy = lazy(() => import('./pages/home/Home.page'));
 
@@ -29,9 +31,11 @@ const App = () => {
             <Route path="/" component={HomePageLazy} />
           </Switch>
         ) : (
-          <Switch>
-            <Route path="/" component={IdentificationPageLazy} />
-          </Switch>
+          <DefaultLayout>
+            <Switch>
+              <Route path="/" component={IdentificationPageLazy} />
+            </Switch>
+          </DefaultLayout>
         )}
       </Suspense>
     </BrowserRouter>
