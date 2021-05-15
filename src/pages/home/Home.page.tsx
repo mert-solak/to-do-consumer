@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Home.page.module.scss';
+import styles from './Home.module.scss';
 
 // TODO:Mert change background url
 const HomePage = () => (

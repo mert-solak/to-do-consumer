@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { mount } from 'remote/identification/identificationApp';
+import { mount } from 'remote/identification/IdentificationApp';
 
 import { Remote } from '../../components';
 
-import styles from './Identification.page.module.scss';
-
 const IdentificationPage = () => (
-  <div className={styles.container}>
+  <div>
     <Remote mount={mount} />
   </div>
 );
