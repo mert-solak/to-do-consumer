@@ -1,2 +1,2 @@
 declare module '*.scss';
-declare module 'remote/*';
+declare module 'task/*';

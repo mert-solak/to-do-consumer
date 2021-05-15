@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --host 0.0.0.0 --config config/webpack/webpack.dev.js",
+    "start": "webpack serve --history-api-fallback --host 0.0.0.0 --config config/webpack/webpack.dev.js",
     "build": "webpack --config config/webpack/webpack.prod.js",
     "commit": "git-cz",
     "release": "standard-version",
