@@ -7,7 +7,6 @@ import { userDefinitions } from './definitions';
 import { userEvents } from './events';
 import { routeConfig } from './configs';
 
-const HomePageLazy = lazy(() => import('./pages/home/Home.page'));
 const IdentificationPageLazy = lazy(() => import('./pages/identification/Identification.page'));
 const TasksPageLazy = lazy(() => import('./pages/tasks/tasks.page'));
 
