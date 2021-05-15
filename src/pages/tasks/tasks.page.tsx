@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { mount } from 'remote/task/TaskApp';
+import { mount } from 'task/TaskApp';
 
 import { Remote } from '../../components';
 
