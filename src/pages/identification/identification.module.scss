@@ -1,0 +1,16 @@
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+}
+
+.todoImage {
+  width: 50%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .todoImage {
+    display: none;
+  }
+}
