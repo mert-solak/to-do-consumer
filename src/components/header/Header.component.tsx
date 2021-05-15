@@ -16,9 +16,7 @@ export const Header: React.FC<Props> = ({ userName }) => {
       <div className={styles.left}>
         <Button
           className={styles.button}
-          onClick={() => {
-            history.push({ pathname: routeConfig.routes.tasks, search: `?userName=${userName}` });
-          }}
+          onClick={() => history.push(routeConfig.routes.myTasks)}
           color="primary"
         >
           My Tasks
