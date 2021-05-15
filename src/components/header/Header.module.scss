@@ -1,0 +1,15 @@
+.container {
+  padding: 0px 24px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+}
+
+.left > .button {
+  margin-left: 12px;
+}
