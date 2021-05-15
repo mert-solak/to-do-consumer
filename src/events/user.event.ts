@@ -1,7 +1,6 @@
-import { eventHelper } from '../helpers';
-
-import { userDefinitions } from '../definitions';
 import { eventConfig } from '../configs';
+import { eventHelper } from '../helpers';
+import { userDefinitions } from '../definitions';
 
 export const sendUserNameOnRequest: userDefinitions.SendUserNameOnRequest = (userName) => {
   eventHelper.on(eventConfig.eventNames.userNameRequest, () => {
