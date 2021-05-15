@@ -1,21 +1,18 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import DefaultLayout from './layouts/default/Default.layout';
 import { Loading } from './components';
 import { userDefinitions } from './definitions';
 import { userEvents } from './events';
+import { routeConfig } from './configs';
 
 const HomePageLazy = lazy(() => import('./pages/home/Home.page'));
 const IdentificationPageLazy = lazy(() => import('./pages/identification/Identification.page'));
 const TasksPageLazy = lazy(() => import('./pages/tasks/tasks.page'));
 
 const App = () => {
-  const [userName, setUserName] = useState<userDefinitions.UserName>(); // TODO:Mert remove
-
-  useEffect(() => {
-    userEvents.setUserName(setUserName);
-  }, []);
+  const [userName, setUserName] = useState<userDefinitions.UserName>('test user name'); // TODO:Mert remove
 
   useEffect(() => {
     if (userName) {
@@ -31,13 +28,13 @@ const App = () => {
         {userName ? (
           <DefaultLayout userName={userName}>
             <Switch>
-              <Route exact path="/tasks" component={TasksPageLazy} />
-              <Route exact path="/" component={HomePageLazy} />
+              <Route path={routeConfig.routes.tasks} component={TasksPageLazy} />
+              <Route path="/" component={() => <Redirect to={routeConfig.routes.tasks} />} />
             </Switch>
           </DefaultLayout>
         ) : (
           <Switch>
-            <Route exact path="/" component={IdentificationPageLazy} />
+            <Route exact path="/" component={() => <IdentificationPageLazy setUserName={setUserName} />} />
           </Switch>
         )}
       </Suspense>
