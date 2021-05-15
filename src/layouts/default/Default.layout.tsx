@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { mount } from 'remote/header/headerApp';
+import { Header } from '../../components';
+import { Props } from './Default.config';
 
-import { Remote } from '../../components';
+import styles from './Default.module.scss';
 
-import styles from './Default.layout.module.scss';
-
-const DefaultLayout: React.FC = ({ children }) => (
+const DefaultLayout: React.FC<Props> = ({ children, userName }) => (
   <div className={styles.container}>
-    <Remote mount={mount} />
+    <Header userName={userName} />
     {children}
   </div>
 );
