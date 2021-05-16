@@ -1,4 +1,4 @@
-name: deploy-consumer
+name: deploy-consumer-1
 
 on:
   push:
