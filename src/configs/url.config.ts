@@ -1,3 +1,3 @@
 export const urls = {
-  api: process.env.API,
+  api: 'http://todobackend-env-2.eba-rqh48avs.eu-west-1.elasticbeanstalk.com',
 };

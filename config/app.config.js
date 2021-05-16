@@ -1,5 +1,3 @@
-const domain = process.env.PRODUCTION_DOMAIN;
-
 module.exports = {
   name: 'to-do-consumer',
   development: {
