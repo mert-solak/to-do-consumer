@@ -11,7 +11,7 @@ module.exports = {
   },
   production: {
     remotes: {
-      task: `task@${domain}/consumer/latest/remoteEntry.js`,
+      task: 'task@https://d2gv3boljuq77d.cloudfront.net/consumer/latest/remoteEntry.js',
     },
   },
 };
