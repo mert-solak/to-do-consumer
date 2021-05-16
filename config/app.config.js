@@ -11,7 +11,7 @@ module.exports = {
   },
   production: {
     remotes: {
-      task: `task@${domain}/task/remoteEntry.js`,
+      task: `task@${domain}/consumer/latest/remoteEntry.js`,
     },
   },
 };
