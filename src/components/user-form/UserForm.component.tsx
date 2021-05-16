@@ -3,12 +3,11 @@ import React, { ChangeEvent, FormEventHandler, useState } from 'react';
 import { TextField, Button } from '@material-ui/core';
 
 import { Props } from './UserForm.config';
-import { userDefinitions } from '../../definitions';
 
 import styles from './UserForm.module.scss';
 
 export const UserForm: React.FC<Props> = ({ setUserName }) => {
-  const [inputValue, setInputValue] = useState<userDefinitions.UserName>();
+  const [inputValue, setInputValue] = useState<string>();
 
   const handleOnClickSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     if (inputValue) {
