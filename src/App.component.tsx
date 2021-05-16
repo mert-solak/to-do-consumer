@@ -11,7 +11,7 @@ const IdentificationPageLazy = lazy(() => import('./pages/identification/Identif
 const TasksPageLazy = lazy(() => import('./pages/tasks/tasks.page'));
 
 const App = () => {
-  const [userName, setUserName] = useState<userDefinitions.UserName>('test user name'); // TODO:Mert remove
+  const [userName, setUserName] = useState<userDefinitions.UserName>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
