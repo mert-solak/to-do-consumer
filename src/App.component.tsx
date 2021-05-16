@@ -12,7 +12,7 @@ const TasksPageLazy = lazy(() => import('./pages/tasks/tasks.page'));
 
 const App = () => {
   const [userName, setUserName] = useState<userDefinitions.UserName>('test user name'); // TODO:Mert remove
-  const [isLoading, setIsLoading] = useState<boolean>(false); // TODO:Mert remove
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     if (userName) {
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <CustomSnackbar listenErrors={snackbarEvents.setErrorMessage} />
-      <Loading isOpen />
+      <Loading isOpen={isLoading} />
 
       <Suspense fallback={!isLoading && <Loading isOpen />}>
         {userName ? (
